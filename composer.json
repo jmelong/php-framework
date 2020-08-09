@@ -1,0 +1,15 @@
+{
+    "name": "jamielong/phpmvc-framework",
+    "authors": [
+        {
+            "name": "Jamie Long",
+            "email": "jnlong.dev@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
