@@ -23,7 +23,6 @@ class Router
         $this->response = $response;
     }
 
-
     public function get($path, $callback)
     {
         $this->routes['get'][$path] = $callback;
