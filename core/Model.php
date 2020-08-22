@@ -10,7 +10,6 @@ namespace app\core;
  */
 abstract class Model
 {
-    // test
     public const RULE_REQUIRED = 'required';
     public const RULE_EMAIL = 'email';
     public const RULE_MIN = 'min';
