@@ -1,7 +1,5 @@
 <?php
 
-// https://www.youtube.com/watch?v=ZSYhQkM5VIM&t=235s @47:10
-
 namespace app\core;
 
 /**
