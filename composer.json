@@ -12,7 +12,9 @@
         }
     },
     "require": {
-        "vlucas/phpdotenv": "^5.1"
+        "vlucas/phpdotenv": "^5.1",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "require-dev": {
     }
 }
-
