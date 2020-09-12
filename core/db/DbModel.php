@@ -1,9 +1,10 @@
 <?php
 
-//https://www.youtube.com/watch?v=mtBIu9dfclY @14:31
+namespace app\core\db;
 
-namespace app\core;
 
+use app\core\Application;
+use app\core\Model;
 
 abstract class DbModel extends Model
 {
