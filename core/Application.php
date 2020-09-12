@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use app\models\User;
+
 /**
  * Class Application
  * @package app\core
@@ -10,7 +12,8 @@ class Application
 {
     public static string $ROOT_DIR;
 
-    public string $userClass;
+    public string $layout = 'main';
+    public string $userClass = '';
     public Router $router;
     public Request $request;
     public Response $response;
@@ -19,7 +22,7 @@ class Application
     public ?DbModel $user;
 
     public static Application $app;
-    public Controller $controller;
+    public ?Controller $controller = null;
     public function __construct($rootPath, array $config)
     {
         $this->userClass = $config['userClass'];
@@ -34,8 +37,8 @@ class Application
 
         $primaryValue = $this->session->get('user');
         if ($primaryValue) {
-            $primaryKey = $this->userClass::primaryKey();
-            $this->user = $this->userClass::findOne(['id' => $primaryValue]);
+            $primaryKey = (new User)->primaryKey();
+            $this->user = (new User)->findOne(['id' => $primaryValue]);
         } else {
              $this->user = null;
         }
@@ -47,12 +50,19 @@ class Application
     }
 
     public function run(){
-        echo $this->router->resolve();
+        try{
+            echo $this->router->resolve();
+        }catch(\Exception $e){
+            $this->response->setStatusCode($e->getCode());
+            echo $this->router->renderView('_error', [
+                'exception' => $e
+            ]);
+        }
     }
 
     /**
-     * 
-     * @return app\core\Controller 
+     *
+     * @return \app\core\Controller
      */
     public function getController(): \app\core\Controller
     {

@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use app\core\middlewares\BaseMiddleware;
+
 /**
  * Class Controller
  * @package app\core
@@ -10,6 +12,13 @@ namespace app\core;
  class Controller
  {
     public string $layout = 'main';
+    public string $action = '';
+
+     /**
+      * @var \app\core\middlewares\BaseMiddleware[]
+      */
+    protected array $middlewares = [];
+
     public function setLayout($layout)
     {
         $this->layout = $layout;
@@ -19,4 +28,17 @@ namespace app\core;
     {
        return Application::$app->router->renderView($view, $params);
     }
+
+    public function registerMiddleware(BaseMiddleware $middleware)
+    {
+        $this->middlewares[] = $middleware;
+    }
+
+     /**
+      * @return middlewares\baseMiddleware[]
+      */
+     public function getMiddlewares(): array
+     {
+         return $this->middlewares;
+     }
  }
