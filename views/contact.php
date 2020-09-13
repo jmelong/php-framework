@@ -1,17 +1,17 @@
 <?php
-/** @var $this \app\core\View */
+/** @var $this \jamielong\phpmvc\View */
 /** @var $model \app\models\ContactForm */
 
-use app\core\form\TextareaField;
+use jamielong\phpmvc\form\TextareaField;
 
 $this->title = 'Contact';
 ?>
 
 <h1>Contact Us</h1>
 
-<?php $form = \app\core\form\Form::begin('', 'post') ?>
+<?php $form = \jamielong\phpmvc\form\Form::begin('', 'post') ?>
 <?php echo $form->field($model, 'subject') ?>
 <?php echo $form->field($model, 'email') ?>
 <?php echo new TextareaField($model, 'body') ?>
 <button type="submit" class="btn btn-primary">Submit</button>
-<?php \app\core\form\Form::end(); ?>
+<?php \jamielong\phpmvc\form\Form::end(); ?>

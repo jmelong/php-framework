@@ -3,8 +3,8 @@
 
 namespace app\models;
 
-use app\core\Application;
-use app\core\model;
+use jamielong\phpmvc\Application;
+use jamielong\phpmvc\model;
 
 /**
  * Class LoginForm

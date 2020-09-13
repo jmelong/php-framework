@@ -1,5 +1,5 @@
 <?php
-use app\core\Application;
+use jamielong\phpmvc\Application;
 ?>
 
 <!doctype html>
@@ -54,7 +54,7 @@ use app\core\Application;
     </div>
 </nav>
 <div class="container">
-    <?php if (\app\core\Application::$app->session->getFlash('success')): ?>
+    <?php if (\jamielong\phpmvc\Application::$app->session->getFlash('success')): ?>
     <div class="alert alert-success">
         <?php echo Application::$app->session->getFlash('success') ?>
     </div>
