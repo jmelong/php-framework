@@ -3,9 +3,9 @@
 
 namespace app\models;
 
-use app\core\DbModel;
-use app\core\Model;
-use app\core\UserModel;
+use jamielong\phpmvc\DbModel;
+use jamielong\phpmvc\Model;
+use jamielong\phpmvc\UserModel;
 
 /**
  * Class RegisterModel

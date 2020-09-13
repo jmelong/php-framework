@@ -13,7 +13,8 @@
     },
     "require": {
         "vlucas/phpdotenv": "^5.1",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "jamielong/php-mvc-core": "^v1.0.3"
     },
     "require-dev": {
     }
