@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd62632fe54a087b7517c9d0ebcea3b7",
+    "content-hash": "581ba4197ea6636a52fa9c6f90c380dc",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -67,35 +67,6 @@
                 }
             ],
             "time": "2020-04-13T13:17:36+00:00"
-        },
-        {
-            "name": "jamielong/php-mvc-core",
-            "version": "v1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jmelong/php-mvc-core.git",
-                "reference": "24a9d0979788466859afd5820a800d54a9b31ce5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jmelong/php-mvc-core/zipball/24a9d0979788466859afd5820a800d54a9b31ce5",
-                "reference": "24a9d0979788466859afd5820a800d54a9b31ce5",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "jamielong\\phpmvc\\": "./"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Jamie Long",
-                    "email": "jamielong1221@gmail.com"
-                }
-            ],
-            "time": "2020-09-13T20:52:11+00:00"
         },
         {
             "name": "phpoption/phpoption",

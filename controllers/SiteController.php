@@ -2,10 +2,10 @@
 
 namespace app\controllers;
 
-use jamielong\phpmvc\Application;
-use jamielong\phpmvc\Controller;
-use jamielong\phpmvc\Request;
-use jamielong\phpmvc\Response;
+use app\core\Application;
+use app\core\Controller;
+use app\core\Request;
+use app\core\Response;
 use app\models\ContactForm;
 
 /**

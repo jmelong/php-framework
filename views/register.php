@@ -3,7 +3,7 @@
 ?>
 
 <h1>Create an account</h1>
-<?php $form = \jamielong\phpmvc\form\Form::begin('', "post") ?>
+<?php $form = \app\core\form\Form::begin('', "post") ?>
   <div class="row">
     <div class="col">
       <?php echo $form->field($model, 'firstname') ?>
@@ -17,4 +17,4 @@
   <?php echo $form->field($model, 'confirmPassword')->passwordfield() ?>
 
   <button type="submit" class="btn btn-primary">Submit</button>
-<?php \jamielong\phpmvc\form\FORM::end() ?>
+<?php \app\core\form\FORM::end() ?>
